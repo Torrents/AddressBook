@@ -10,7 +10,7 @@ using System.Web.Http;
 
 namespace AddressBook.Web.Controllers
 {
-	public class ContactController : ApiController
+	public class ContactsController : ApiController
 	{
         private string _connectionString = ConfigurationManager.ConnectionStrings["AddressBook"].ConnectionString;
 
@@ -24,12 +24,12 @@ namespace AddressBook.Web.Controllers
 
 		// ToDo: Update to use injected service
 		// see http://blog.ploeh.dk/2012/09/28/DependencyInjectionandLifetimeManagementwithASP.NETWebAPI/
-		public ContactController()
+		public ContactsController()
 		{
 			AddressBookService = new AddressBookService(new AddressBookDbContext(_connectionString));
 		}
 
-		// GET: api/Contact
+		// GET: api/Contacts
 		public string Get()
 		{
             var contacts = AddressBookService.ContactManager.GetAll();
