@@ -1,4 +1,5 @@
-﻿using AddressBook.EntityFramework;
+﻿using AddressBook.Dtos;
+using AddressBook.EntityFramework;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -43,9 +44,11 @@ namespace AddressBook.Web.Controllers
 			return "value";
 		}
 
-		// POST: api/Contact
-		public void Post([FromBody]string value)
+		// POST: api/Contacts
+		public string Post(ContactDto contactDto)
 		{
+            var result = AddressBookService.ContactManager.Add(contactDto);
+            return JsonConvert.SerializeObject(result);
 		}
 
 		// PUT: api/Contact/5

@@ -26,7 +26,7 @@ namespace AddressBook.Tests
 			{
 				FirstName = "Champ",
 				LastName = "Bailey",
-				NickName = "Shutdown Corner",
+				Nickname = "Shutdown Corner",
 				Email = "cbailey24@dovevalley.com",
 				PhoneNumbers = new List<string>() { "999-321-1234", "999.456.7898" }
 			};
@@ -45,7 +45,7 @@ namespace AddressBook.Tests
 			var contactDto = new ContactDto
 			{
 				LastName = "Atwater",
-				NickName = "Shutdown Linebacker",
+				Nickname = "Shutdown Linebacker",
 				Email = "sethAtwater@dovevalley.com"
 			};
 

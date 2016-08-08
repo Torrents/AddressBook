@@ -39,7 +39,7 @@ namespace AddressBook.Managers
 			{
 				FirstName = contactDto.FirstName,
 				LastName = contactDto.LastName,
-				NickName = contactDto.NickName,
+				Nickname = contactDto.Nickname,
 				Email = contactDto.Email
 			};
 

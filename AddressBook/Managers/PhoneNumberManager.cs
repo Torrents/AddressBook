@@ -11,7 +11,7 @@ namespace AddressBook.Managers
 	{
 		internal PhoneNumber CreatePhoneNumber(string phoneNumberString, Contact contact)
 		{
-			if (string.IsNullOrWhiteSpace(phoneNumberString.Trim()))
+			if (string.IsNullOrWhiteSpace(phoneNumberString))
 				return null;
 
 			return new PhoneNumber { Contact = contact, Number = this.GetNumbers(phoneNumberString) };

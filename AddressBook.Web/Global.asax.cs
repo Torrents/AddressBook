@@ -19,6 +19,8 @@ namespace AddressBook.Web
 			RouteConfig.RegisterRoutes(RouteTable.Routes);
 			BundleConfig.RegisterBundles(BundleTable.Bundles);
             //ControllerBuilder.Current.SetControllerFactory(new AddressBookControllerFactory());
+
+
         }
 	}
 }
